@@ -1,0 +1,37 @@
+<app-header></app-header>
+<app-navbar></app-navbar>
+<section class="content">
+  <div class="container-fluid">
+    <div class="row"><h1>Formulario Reactivo</h1></div>
+    <div class="row">
+        <form [formGroup]="myForm">
+            <div class="mb-3">
+              <label for="username">Username (Mínimo 6 caracteres)</label>
+              <input
+                [class.is-invalid]="myForm.get('username')?.touched && myForm.get('username')?.invalid"
+                type="text"
+                class="form-control"
+                id="username"
+                formControlName="username"
+                placeholder="Enter username"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="password">Password (Mínimo 8 caracteres, 1 mayúscula y 1 número.)</label>
+              <input
+                [class.is-invalid]="myForm.get('password')?.touched && myForm.get('password')?.invalid"
+                type="password"
+                class="form-control"
+                id="password"
+                formControlName="password"
+                placeholder="Enter password"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary m-t-sm">Enviar</button>
+          </form>
+          
+      {{ myForm.value | json }}
+    </div>
+
+  </div>
+</section>

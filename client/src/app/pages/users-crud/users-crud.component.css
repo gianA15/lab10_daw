@@ -1,0 +1,102 @@
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  thead th {
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+    color: black
+  }
+  
+  tbody td {
+    border-bottom: 1px solid #ccc;
+    padding: 8px;
+  }
+  
+  button {
+    margin-left: 10px;
+  }
+  
+  form {
+    margin-top: 20px;
+  }
+  
+  label {
+    display: inline-block;
+    width: 80px;
+  }
+  
+  input {
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  .input-field {
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 10px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    font-family: Arial, sans-serif; /* Establece una fuente de letra */
+    font-size: 14px; /* Establece el tamaño de letra */
+    font-weight: bold; /* Establece el grosor de la letra */
+    color: #333; /* Establece el color de la letra */
+  }
+  
+  .input-field:hover {
+    opacity: 1;
+    color: #000; /* Cambia el color de la letra al pasar el mouse por encima */
+  }
+  
+  .input-field:hover {
+    opacity: 1; /* Aumenta la opacidad al pasar el mouse por encima */
+  }
+  button[type="submit"] {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  button[type="submit"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #45a049;
+  }
+  .button.danger {
+    background-color: #dc3545;
+  }

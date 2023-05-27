@@ -1,0 +1,86 @@
+<app-navbar></app-navbar>
+<section class="content">
+  <div class="">
+    <h2>Lista de Usuarios</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Email</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user._id }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.email }}</td>
+          <td>
+            <button class="button danger" (click)="deleteUser(user._id)">
+              Eliminar
+            </button>
+            <button class="button" (click)="selectUser(user)">Editar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Agregar Usuario</h2>
+
+    <form (ngSubmit)="createUser()">
+      <div>
+        <label for="name">Nombre:</label>
+        <input
+          class="input-field"
+          type="text"
+          id="name"
+          name="name"
+          [(ngModel)]="newUser.username"
+          required
+        />
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input
+          class="input-field"
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="newUser.email"
+          required
+        />
+      </div>
+      <button type="submit">Agregar</button>
+    </form>
+
+    <h2>Actualizar Usuario</h2>
+
+    <form (ngSubmit)="updateUser()">
+      <div>
+        <label for="updateName">Nombre:</label>
+        <input
+          class="input-field"
+          type="text"
+          id="updateName"
+          name="updateName"
+          [(ngModel)]="selectedUser.username"
+          required
+        />
+      </div>
+      <div>
+        <label for="updateEmail">Email:</label>
+        <input
+          class="input-field"
+          type="email"
+          id="updateEmail"
+          name="updateEmail"
+          [(ngModel)]="selectedUser.email"
+          required
+        />
+      </div>
+      <button type="submit">Actualizar</button>
+    </form>
+  </div>
+</section>
